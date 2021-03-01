@@ -9,6 +9,7 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
         var intent = Intent(this, ProductosActivity::class.java)
 
         val btnCold: Button = findViewById(R.id.button_cold_drinks) as Button
@@ -18,35 +19,28 @@ class MenuActivity : AppCompatActivity() {
         val btnCombos: Button = findViewById(R.id.button_combos) as Button
         val btnCustom: Button = findViewById(R.id.button_custom) as Button
 
-
-        /*
         btnCold.setOnClickListener {
             intent.putExtra("type", "coldDrinks")
             startActivity(intent)
         }
-        */
-        btnCold.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
-            startActivity(intent)
-        }
         btnHot.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("type", "hotDrinks")
             startActivity(intent)
         }
         btnSweet.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("type", "sweets")
             startActivity(intent)
         }
         btnSalties.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("type", "salties")
             startActivity(intent)
         }
         btnCombos.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("type", "combos")
             startActivity(intent)
         }
         btnCustom.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("type", "custom")
             startActivity(intent)
         }
 

@@ -13,19 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnStar: Button = findViewById(R.id.button_get_started) as Button
-        //var btnCold: Button = findViewById<Button>(R.id.button_cold_drinks) as Button
 
         btnStar.setOnClickListener {
             var intent: Intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        /*
-        btnCold.setOnClickListener {
-            var intent: Intent = Intent(this, ProductosActivity::class.java)
-            startActivity(intent)
-        }
-        */
 
     }
 }
